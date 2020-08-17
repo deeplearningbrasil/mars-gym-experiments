@@ -1,0 +1,7 @@
+name: mars-gym-experiments
+channels:
+- anaconda
+dependencies:
+- python=3.6
+- pip
+  # - mars-gym=/media/workspace/DeepFood/deep-reco-gym/src

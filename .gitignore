@@ -1,0 +1,9 @@
+output/
+trivago/dataset
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+*.pyc
+*.db
+*.log
