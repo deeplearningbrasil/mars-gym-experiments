@@ -37,3 +37,23 @@ trivago_experiment = ProjectConfig(
     hist_output_column_name="hist_clicked",
     recommender_type=RecommenderType.USER_BASED_COLLABORATIVE_FILTERING,
 )
+
+fixed_trivago_experiment = ProjectConfig(
+    base_dir=data.BASE_DIR,
+    prepare_data_frames_task=data.PrepareTrivagoSessionsDataFrames,
+    dataset_class=InteractionsDataset,
+    user_column=Column("user_idx", IOType.INDEXABLE),
+    item_column=Column("item_idx", IOType.INDEXABLE),
+    available_arms_column_name="impressions",
+    other_input_columns=[
+        Column("first_item_idx", IOType.INDEXABLE, same_index_as="item_idx"),
+        Column("popularity_item_idx", IOType.INDEXABLE, same_index_as="item_idx"),
+        Column("action_type_item_idx", IOType.INDEXABLE, same_index_as="item_idx")
+    ],
+    metadata_columns=[
+    ],
+    output_column=Column("clicked", IOType.NUMBER),
+    hist_view_column_name="hist_views",
+    hist_output_column_name="hist_clicked",
+    recommender_type=RecommenderType.USER_BASED_COLLABORATIVE_FILTERING,
+)
