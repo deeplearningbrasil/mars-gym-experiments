@@ -26,7 +26,6 @@ Usage
 
 A simple experiment can be run directly from Mars-Gym:
 
-
 Training: 
 .. code:: bash
 
@@ -49,19 +48,20 @@ Training:
 Evaluation: 
 .. code:: bash
 
-  mars-gym evaluate interaction --model-task-id InteractionTraining____mars_gym_model_b___epsilon___0_1__472bcd526f --offpolicy --fairness-columns '["device_idx"]'
+  mars-gym evaluate interaction --model-task-id InteractionTraining____mars_gym_model_b___epsilon___0_1__472bcd526f --offpolicy --fairness-columns '["device_idx", "city_idx", "accessible parking", "accessible hotel", "hotel", "house / apartment", "childcare", "family friendly"]'
 
 
-There are many scripts separated by cities for reproducibility original paper:
+There are many scripts separated by cities for reproducibility original paper results:
 
 - scripts/simulation/coma_italy_script.sh
 - scripts/simulation/chicago_usa_script.sh
 - scripts/simulation/rio_janeiro_brazil_script.sh
 - scripts/simulation/new_york_usa_script.sh
 - scripts/simulation/recsys_script.sh
-- scripts/metrics/chicago_usa_script.sh
+- scripts/metrics/eval_chicago_usa_script.sh
+- scripts/metrics/fairness_recsys_script.sh
 
-Run:
+Example to Run Simulations:
 .. code:: bash
 
   sh scripts/simulation/chicago_usa_script.sh
@@ -75,8 +75,7 @@ We can use MARS-gym's Evaluation Platform for visualizing the results:
 .. code:: bash
   mars-gym viz
 
-or used a specific `Notebook <scripts/notebooks/PlotResults.ipynb>`_ to export results for the original paper.
-
+or used a specific `Notebook <scripts/notebooks/PlotResults.ipynb>`_ to export results for the original paper. (you must run all scripts before)
 
 
 Cite

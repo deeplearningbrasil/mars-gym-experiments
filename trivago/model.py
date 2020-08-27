@@ -150,3 +150,52 @@ class SimpleLinearModel(RecommenderModule):
         out = torch.sigmoid(x)
         return out
        
+
+class FixedPolicyEstimator(RecommenderModule):
+    def __init__(self,
+                 project_config: ProjectConfig,
+                 index_mapping: Dict[str, Dict[Any, int]],
+                 n_factors: int = 50,
+                 dropout_prob: int = 0.0,
+                 dropout_module: Type[Union[nn.Dropout, nn.AlphaDropout]] = nn.AlphaDropout,
+                 weight_init: Callable = lecun_normal_init):
+
+        super(FixedPolicyEstimator, self).__init__(project_config, index_mapping)
+
+        self.user_embeddings = nn.Embedding(self._n_users, n_factors)
+        self.item_embeddings = nn.Embedding(self._n_items, n_factors)
+
+        # Dropout
+        self.dropout: nn.Module = dropout_module(dropout_prob)
+
+        # Dense
+        num_dense = n_factors * 3
+
+        self.dense = nn.Sequential(
+            nn.Linear(num_dense, int(num_dense/2)),
+            nn.SELU(),
+            nn.Linear(int(num_dense/2), int(num_dense/4)),
+            nn.SELU(),
+            nn.Linear(int(num_dense/4), 1)
+        )
+
+        # init
+        weight_init(self.user_embeddings.weight)
+        weight_init(self.item_embeddings.weight)
+
+    def forward(self, user_ids, item_ids, first_item_idx,
+                popularity_item_idx, action_type_item_idx):
+
+        # Geral embs
+        user_emb = self.user_embeddings(user_ids)
+        item_emb = self.item_embeddings(item_ids)
+        first_item_emb = self.item_embeddings(first_item_idx)
+        popularity_item_emb = self.item_embeddings(popularity_item_idx)
+
+        x = torch.cat((item_emb,
+                       first_item_emb,
+                       popularity_item_emb), dim=1)
+
+        x   = self.dense(x)
+        out = torch.sigmoid(x)
+        return out
