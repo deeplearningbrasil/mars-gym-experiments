@@ -50,7 +50,10 @@ Evaluation:
 
 .. code:: bash
 
-  mars-gym evaluate interaction --model-task-id InteractionTraining____mars_gym_model_b___epsilon___0_1__472bcd526f --offpolicy --fairness-columns '["device_idx", "city_idx", "accessible parking", "accessible hotel", "hotel", "house / apartment", "childcare", "family friendly"]'
+  mars-gym evaluate interaction \
+  --model-task-id InteractionTraining____mars_gym_model_b___epsilon___0_1__472bcd526f \
+  --offpolicy \
+  --fairness-columns '["device_idx", "city_idx", "accessible parking", "accessible hotel", "hotel", "house / apartment", "childcare", "family friendly"]'
 
 
 There are many scripts separated by cities for reproducibility original paper results:
@@ -77,6 +80,10 @@ We can use MARS-gym's Evaluation Platform for visualizing the results:
 
 .. code:: bash
   mars-gym viz
+
+.. image:: images/dataviz.png
+  :width: 600
+
 
 or used a specific `Notebook <scripts/notebooks/PlotResults.ipynb>`_ to export results for the original paper. (you must run all scripts before)
 
