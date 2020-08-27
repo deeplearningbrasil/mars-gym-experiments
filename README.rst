@@ -2,7 +2,7 @@
 MARS-Gym - Experiments
 ######################
 
-This repository includes all experiments of paper 'MARS-Gym: A Gym framework to model, train, and evaluate recommendation systems for marketplaces'  and can be used for reproducibility or example of framework usage.
+This repository includes all experiments of paper **'MARS-Gym: A Gym framework to model, train, and evaluate recommendation systems for marketplaces'**  and can be used for reproducibility or example of framework usage.
 
 Setup
 #####
@@ -27,6 +27,7 @@ Usage
 A simple experiment can be run directly from Mars-Gym:
 
 Training: 
+
 .. code:: bash
 
   mars-gym run interaction \
@@ -46,6 +47,7 @@ Training:
   --full-refit 
 
 Evaluation: 
+
 .. code:: bash
 
   mars-gym evaluate interaction --model-task-id InteractionTraining____mars_gym_model_b___epsilon___0_1__472bcd526f --offpolicy --fairness-columns '["device_idx", "city_idx", "accessible parking", "accessible hotel", "hotel", "house / apartment", "childcare", "family friendly"]'
@@ -62,6 +64,7 @@ There are many scripts separated by cities for reproducibility original paper re
 - scripts/metrics/fairness_recsys_script.sh
 
 Example to Run Simulations:
+
 .. code:: bash
 
   sh scripts/simulation/chicago_usa_script.sh
