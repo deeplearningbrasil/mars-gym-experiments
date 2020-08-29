@@ -93,7 +93,7 @@ Recommendation Metrics and Off-Policy Evaluation
 There is one script for original paper reproducibility results with train and eval metrics: ``scripts/metrics/metrics_chicago_usa_script.sh``
 
 
-.. csv-table:: Table Title
+.. csv-table:: Recommendation Metrics for "Chicago, USA" task.
    :header-rows: 1
 
     bandit_policy_class                           , precision_at_1, ndcg_at_5, coverage_at_5, personalization_at_5, IPS  , SNIPS, DirectEstimator, DoublyRobust, index
