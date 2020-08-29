@@ -14,6 +14,7 @@ Dependencies
 
 -  python=3.6.7
 -  mars-gym=0.0.1
+-  spark=2.4.6
 
 Install
 -------

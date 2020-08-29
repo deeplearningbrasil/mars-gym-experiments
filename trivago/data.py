@@ -167,8 +167,8 @@ class FilterDataset(BasePySparkTask):
             "timestamp", ascending=False).limit(self.sample_size)
 
       # Save
-      toPandas(train_df).to_csv(self.output()[0].path, index=False)
-      toPandas(meta_df).to_csv(self.output()[1].path, index=False)
+      train_df.toPandas().to_csv(self.output()[0].path, index=False)
+      meta_df.toPandas().to_csv(self.output()[1].path, index=False)
 
 class TransformMetaDataset(luigi.Task):
     sample_size: int = luigi.IntParameter(default=-1)
