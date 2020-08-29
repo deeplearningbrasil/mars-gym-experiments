@@ -92,10 +92,21 @@ Recommendation Metrics and Off-Policy Evaluation
 
 There is one script for original paper reproducibility results with train and eval metrics: ``scripts/metrics/metrics_chicago_usa_script.sh``
 
+
 .. csv-table:: Table Title
-   :file: docs/metrics.csv
-   :widths: 30, 70
    :header-rows: 1
+
+    bandit_policy_class                           , precision_at_1, ndcg_at_5, coverage_at_5, personalization_at_5, IPS  , SNIPS, DirectEstimator, DoublyRobust, index
+    mars_gym.model.bandit.AdaptiveGreedy          , 0.318         , 0.404    , 0.391        , 0.768               , 0.299, 0.308, 0.276          , 0.292       , 0
+    mars_gym.model.bandit.CustomRewardModelLinUCB , 0.328         , 0.443    , 0.363        , 0.729               , 0.306, 0.316, 0.276          , 0.298       , 0
+    mars_gym.model.bandit.EpsilonGreedy           , 0.302         , 0.443    , 0.343        , 0.734               , 0.297, 0.295, 0.256          , 0.281       , 0
+    mars_gym.model.bandit.ExploreThenExploit      , 0.305         , 0.403    , 0.364        , 0.752               , 0.294, 0.288, 0.253          , 0.279       , 0
+    mars_gym.model.bandit.FixedPolicy             , 0.074         , 0.171    , 0.374        , 0.76                , 0.076, 0.077, 0.098          , 0.078       , 0
+    mars_gym.model.bandit.LinUCB                  , 0.076         , 0.207    , 0.271        , 0.696               , 0.053, 0.056, 0.058          , 0.056       , 0
+    mars_gym.model.bandit.PercentileAdaptiveGreedy, 0.337         , 0.439    , 0.376        , 0.744               , 0.322, 0.317, 0.273          , 0.307       , 0
+    mars_gym.model.bandit.RandomPolicy            , 0.04          , 0.138    , 0.39         , 0.776               , 0.041, 0.041, 0.042          , 0.042       , 0
+
+
 
 Fairness Results
 ----------------
