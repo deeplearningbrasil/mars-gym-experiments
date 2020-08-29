@@ -2,7 +2,9 @@
 MARS-Gym - Experiments
 ######################
 
-This repository includes all experiments of paper **'MARS-Gym: A Gym framework to model, train, and evaluate recommendation systems for marketplaces'**  and can be used for reproducibility or example of framework usage.
+This repository includes all experiments of paper **'MARS-Gym: A Gym framework to model, train, and evaluate recommendation systems for marketplaces'**  and can be used for reproducibility or example of framework usage. 
+
+MARS-Gym Repo: https://github.com/marlesson/mars-gym
 
 Setup
 #####
@@ -20,6 +22,14 @@ Install
 
   conda env create -f environment.yml
   conda activate mars-gym-experiments
+
+Dataset
+#######
+
+Trivago organized the ACM RecSys Challenge in 2019. For this competition, it provided a dataset that consists of session logs with 910k samples. Each session contains a sequence of interactions between a user and the platform. They can represent different actions, such as rating, get item metadata (info, image, and deals), sort list, search for a destination or point of interest. In addition to the user session information, the dataset also provides different item metadata that characterize the hotels. 
+
+The dataset can be found in https://recsys.trivago.cloud/challenge/dataset/, it's importante that is in ``./trivago/dataset/trivagoRecSysChallengeData2019_v2``
+
 
 Usage
 #####
@@ -56,14 +66,14 @@ Evaluation:
   --fairness-columns '["device_idx", "city_idx", "accessible parking", "accessible hotel", "hotel", "house / apartment", "childcare", "family friendly"]'
 
 
-There are many scripts separated by cities for reproducibility original paper results:
+There are many scripts separated by cities for original paper reproducibility results:
 
 - scripts/simulation/coma_italy_script.sh
 - scripts/simulation/chicago_usa_script.sh
 - scripts/simulation/rio_janeiro_brazil_script.sh
 - scripts/simulation/new_york_usa_script.sh
 - scripts/simulation/recsys_script.sh
-- scripts/metrics/eval_chicago_usa_script.sh
+- scripts/metrics/metrics_chicago_usa_script.sh
 - scripts/metrics/fairness_recsys_script.sh
 
 Example to Run Simulations:
