@@ -15,6 +15,7 @@ Dependencies
 -  python=3.6.7
 -  mars-gym=0.0.1
 -  spark=2.4.6
+-  java-8-openjdk
 
 Install
 -------
@@ -66,6 +67,8 @@ Evaluation:
   --offpolicy \
   --fairness-columns '["device_idx", "city_idx", "accessible parking", "accessible hotel", "hotel", "house / apartment", "childcare", "family friendly"]'
 
+Bandit Simulation Results
+-------------------------
 
 There are many scripts separated by cities for original paper reproducibility results:
 
@@ -74,25 +77,42 @@ There are many scripts separated by cities for original paper reproducibility re
 - scripts/simulation/rio_janeiro_brazil_script.sh
 - scripts/simulation/new_york_usa_script.sh
 - scripts/simulation/recsys_script.sh
-- scripts/metrics/metrics_chicago_usa_script.sh
-- scripts/metrics/fairness_recsys_script.sh
 
-Example to Run Simulations:
+Example to Run Simulations and result for 'Chicago, USA':
 
 .. code:: bash
 
   sh scripts/simulation/chicago_usa_script.sh
 
 
-Results
------------
+.. image:: docs/simulation.png
+
+Recommendation Metrics and Off-Policy Evaluation
+------------------------------------------------
+
+There is one script for original paper reproducibility results with train and eval metrics: ``scripts/metrics/metrics_chicago_usa_script.sh``
+
+.. csv-table:: Table Title
+   :file: docs/metrics.csv
+   :widths: 30, 70
+   :header-rows: 1
+
+Fairness Results
+----------------
+
+There is one script for original paper reproducibility results with train and eval metrics: ``scripts/metrics/fairness_recsys_script.sh``
+
+
+
+Visualize Results
+#################
 
 We can use MARS-gym's Evaluation Platform for visualizing the results:
 
 .. code:: bash
   mars-gym viz
 
-.. image:: images/dataviz.png
+.. image:: docs/dataviz.png
   :width: 600
 
 
