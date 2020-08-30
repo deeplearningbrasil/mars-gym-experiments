@@ -152,18 +152,11 @@ There is one script for original paper reproducibility results with train and ev
 
 These commands will train and evaluate some fairness in the columns, such it:
 
-.. [img1] image:: docs/city_fairness.png
-  :scale: 45%
+.. image:: docs/city_fairness.png
+    :width: 45%
+.. image:: docs/device_fairness.png
+    :width: 45%
 
-.. [img2] image:: docs/device_fairness.png
-  :scale: 45%
-
-.. table:: My table
-   :align: center
-
-   +---------+---------+
-   | |img1| | |img2| |
-   +---------+---------+
 
 Visualize Results
 #################
