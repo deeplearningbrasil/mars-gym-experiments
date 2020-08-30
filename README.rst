@@ -153,9 +153,9 @@ There is one script for original paper reproducibility results with train and ev
 These commands will train and evaluate some fairness in the columns, such it:
 
 .. image:: docs/city_fairness.png
-    :width: 45%
+    :width: 300
 .. image:: docs/device_fairness.png
-    :width: 45%
+    :width: 300
 
 
 Visualize Results
