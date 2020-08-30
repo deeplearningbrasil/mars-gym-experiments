@@ -13,7 +13,7 @@ EXP=${1:-1}
 num_episodes=7
 epochs=250 
 obs_batch_size=1000
-batch_size=200 
+batch_size=200
 learning_rate=0.001 
 
 
@@ -27,8 +27,8 @@ mars-gym run interaction \
 --data-frames-preparation-extra-params '{"filter_city": "Chicago, USA", "window_hist":10}' \
 --learning-rate $learning_rate \
 --optimizer adam \
---loss-function-params '{"clip": 1}'\
---batch-size 200 \
+--loss-function-params '{"clip": 1}' \
+--batch-size $batch_size \
 --epochs $epochs \
 --test-size 0 \
 --num-episodes $num_episodes \
@@ -47,8 +47,8 @@ mars-gym run interaction \
 --data-frames-preparation-extra-params '{"filter_city": "Chicago, USA", "window_hist":10}' \
 --learning-rate $learning_rate \
 --optimizer adam \
---loss-function-params '{"clip": 1}'\
---batch-size 200 \
+--loss-function-params '{"clip": 1}' \
+--batch-size $batch_size \
 --epochs $epochs \
 --test-size 0 \
 --num-episodes $num_episodes \
@@ -70,8 +70,8 @@ do
   --data-frames-preparation-extra-params '{"filter_city": "Chicago, USA", "window_hist":10}' \
   --learning-rate $learning_rate \
   --optimizer adam \
-  --loss-function-params '{"clip": 1}'\
-  --batch-size 200 \
+  --loss-function-params '{"clip": 1}' \
+  --batch-size $batch_size \
   --epochs $epochs \
   --test-size 0 \
   --num-episodes $num_episodes \
@@ -90,8 +90,8 @@ do
   --data-frames-preparation-extra-params '{"filter_city": "Chicago, USA", "window_hist":10}' \
   --learning-rate $learning_rate \
   --optimizer adam \
-  --loss-function-params '{"clip": 1}'\
-  --batch-size 200 \
+  --loss-function-params '{"clip": 1}' \
+  --batch-size $batch_size \
   --epochs $epochs \
   --test-size 0 \
   --num-episodes $num_episodes \
@@ -110,8 +110,8 @@ do
   --data-frames-preparation-extra-params '{"filter_city": "Chicago, USA", "window_hist":10}' \
   --learning-rate $learning_rate \
   --optimizer adam \
-  --loss-function-params '{"clip": 1}'\
-  --batch-size 200 \
+  --loss-function-params '{"clip": 1}' \
+  --batch-size $batch_size \
   --epochs $epochs \
   --test-size 0 \
   --num-episodes $num_episodes \
@@ -130,8 +130,8 @@ do
   --data-frames-preparation-extra-params '{"filter_city": "Chicago, USA", "window_hist":10}' \
   --learning-rate $learning_rate \
   --optimizer adam \
-  --loss-function-params '{"clip": 1}'\
-  --batch-size 200 \
+  --loss-function-params '{"clip": 1}' \
+  --batch-size $batch_size \
   --epochs $epochs \
   --test-size 0 \
   --num-episodes $num_episodes \
@@ -151,8 +151,8 @@ do
   --data-frames-preparation-extra-params '{"filter_city": "Chicago, USA", "window_hist":10}' \
   --learning-rate $learning_rate \
   --optimizer adam \
-  --loss-function-params '{"clip": 1}'\
-  --batch-size 200 \
+  --loss-function-params '{"clip": 1}' \
+  --batch-size $batch_size \
   --epochs $epochs \
   --test-size 0 \
   --num-episodes $num_episodes \
@@ -171,8 +171,8 @@ do
   --data-frames-preparation-extra-params '{"filter_city": "Chicago, USA", "window_hist":10}' \
   --learning-rate $learning_rate \
   --optimizer adam \
-  --loss-function-params '{"clip": 1}'\
-  --batch-size 200 \
+  --loss-function-params '{"clip": 1}' \
+  --batch-size $batch_size \
   --epochs $epochs \
   --test-size 0 \
   --num-episodes $num_episodes \
@@ -191,8 +191,8 @@ do
   --data-frames-preparation-extra-params '{"filter_city": "Chicago, USA", "window_hist":10}' \
   --learning-rate $learning_rate \
   --optimizer adam \
-  --loss-function-params '{"clip": 1}'\
-  --batch-size 200 \
+  --loss-function-params '{"clip": 1}' \
+  --batch-size $batch_size \
   --epochs $epochs \
   --test-size 0 \
   --num-episodes $num_episodes \
@@ -213,8 +213,8 @@ do
   --data-frames-preparation-extra-params '{"filter_city": "Chicago, USA", "window_hist":10}' \
   --learning-rate $learning_rate \
   --optimizer adam \
-  --loss-function-params '{"clip": 1}'\
-  --batch-size 200 \
+  --loss-function-params '{"clip": 1}' \
+  --batch-size $batch_size \
   --epochs $epochs \
   --test-size 0 \
   --num-episodes $num_episodes \

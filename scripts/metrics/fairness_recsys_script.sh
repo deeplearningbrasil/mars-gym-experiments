@@ -12,6 +12,7 @@ learning_rate=0.001
 ## Train Script
 ##
 
+#InteractionTraining____mars_gym_model_b___logit_multipli_9dd8714dfd
 mars-gym run interaction \
 --project trivago.config.trivago_experiment \
 --recommender-module-class trivago.model.SimpleLinearModel \
@@ -26,14 +27,14 @@ mars-gym run interaction \
 --num-episodes $num_episodes \
 --val-split-type random \
 --obs-batch-size $obs_batch_size \
---full-refit 
-
+--full-refit \
+--observation "Fairness"
 
 ##################################################################
 ## Evalution Script
 ##
 
 mars-gym evaluate interaction \
---model-task-id InteractionTraining____mars_gym_model_b___epsilon___0_1__472bcd526f \
+--model-task-id InteractionTraining____mars_gym_model_b___logit_multipli_9dd8714dfd \
 --fairness-columns '["device_idx", "city_idx", "accessible parking", "accessible hotel", 
 "hotel", "house / apartment", "childcare", "family friendly"]'

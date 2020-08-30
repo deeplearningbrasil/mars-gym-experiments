@@ -130,10 +130,10 @@ do
   # --data-frames-preparation-extra-params '{"filter_city": "Como, Italy", "window_hist":10}' \
   # --learning-rate $learning_rate \
   # --optimizer adam \
-  --loss-function-params '{"clip": 1}' \
+  # --loss-function-params '{"clip": 1}' \
   # --batch-size 200 \
   # --epochs $epochs \
-  --test-size 0 \
+  # --test-size 0 \
   # --num-episodes $num_episodes \
   # --val-split-type random \
   # --obs-batch-size $obs_batch_size \
