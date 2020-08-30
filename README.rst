@@ -94,7 +94,7 @@ There is one script for original paper reproducibility results with train and ev
 
 
 .. csv-table:: Recommendation Metrics for "Chicago, USA" task.
-   :header-rows: 1
+  :header-rows: 1
 
   bandit_policy_class                           , precision_at_1, ndcg_at_5, coverage_at_5, personalization_at_5, IPS  , SNIPS, DirectEstimator, DoublyRobust, index
   mars_gym.model.bandit.AdaptiveGreedy          , 0.318         , 0.404    , 0.391        , 0.768               , 0.299, 0.308, 0.201          , 0.267       , 0
@@ -152,12 +152,18 @@ There is one script for original paper reproducibility results with train and ev
 
 These commands will train and evaluate some fairness in the columns, such it:
 
-.. image:: docs/city_fairness.png
-  :width: 45%
+.. [img1] image:: docs/city_fairness.png
+  :scale: 45%
 
-.. image:: docs/device_fairness.png
-  :width: 45%
+.. [img2] image:: docs/device_fairness.png
+  :scale: 45%
 
+.. table:: My table
+   :align: center
+
+   +---------+---------+
+   | |img1| | |img2| |
+   +---------+---------+
 
 Visualize Results
 #################
