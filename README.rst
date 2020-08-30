@@ -155,8 +155,9 @@ These commands will train and evaluate some fairness in the columns, such it:
 .. raw:: html
 
   <p float="left">
-    <img src="docs/city_fairness.png" width="40%" />
-    <img src="docs/device_fairness.png" width="40%" /> 
+    <img src="docs/city_fairness.png" width="30%" />
+    <img src="docs/business_fairness.png" width="30%" /> 
+    <img src="docs/device_fairness.png" width="30%" /> 
   </p>
 
 .. .. image:: docs/city_fairness.png
