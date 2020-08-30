@@ -85,7 +85,7 @@ Example to Run Simulations and result for 'Chicago, USA':
   sh scripts/simulation/chicago_usa_script.sh
 
 
-.. image:: docs/simulation_big.png
+.. image:: docs/simulation.png
 
 Recommendation Metrics and Off-Policy Evaluation
 ------------------------------------------------
