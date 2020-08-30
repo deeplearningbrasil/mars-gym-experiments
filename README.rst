@@ -188,7 +188,7 @@ All visualizations can be found in MARS-gym's Evaluation Platform:
   :width: 600
 
 
-or used a specific `Notebook <scripts/notebooks/PlotResults.ipynb>`_ to export results for the original paper. (you must run all scripts before)
+or used a specific `Notebook <scripts/notebooks/Results.ipynb>`_ to export results for the original paper. (you must run all scripts before)
 
 
 Cite
