@@ -4,7 +4,7 @@ MARS-Gym - Experiments
 
 This repository includes all experiments of paper **'MARS-Gym: A Gym framework to model, train, and evaluate recommendation systems for marketplaces'**  and can be used for reproducibility or example of framework usage. 
 
-MARS-Gym Repo: https://github.com/marlesson/mars-gym
+MARS-Gym Repo: https://github.com/deeplearningbrasil/mars-gym
 
 Setup
 #####
