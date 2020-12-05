@@ -13,7 +13,7 @@ Dependencies
 ------------
 
 -  python=3.6.7
--  mars-gym=0.0.1
+-  mars-gym=0.1.1
 -  spark=2.4.6
 -  java-8-openjdk
 
@@ -63,8 +63,7 @@ Evaluation:
 .. code:: bash
 
   mars-gym evaluate interaction \
-  --model-task-id InteractionTraining____mars_gym_model_b___epsilon___0_1__472bcd526f \
-  --offpolicy \
+  --model-task-id InteractionTraining____mars_gym_model_b___epsilon___0_1__905209eb80 \
   --fairness-columns '["device_idx", "city_idx", "accessible parking", "accessible hotel", "hotel", "house / apartment", "childcare", "family friendly"]'
 
 Bandit Simulation Results
@@ -198,8 +197,9 @@ Cite
 Please cite the associated paper for this work if you use this code:
 
 ::
-    @article{santana2020marsgym,
-          title={MARS-Gym: A Gym framework to model, train, and evaluate Recommender Systems for Marketplaces},
+
+    @misc{santana2020marsgym,
+          title={MARS-Gym: A Gym framework to model, train, and evaluate Recommender Systems for Marketplaces}, 
           author={Marlesson R. O. Santana and Luckeciano C. Melo and Fernando H. F. Camargo and Bruno Brandão and Anderson Soares and Renan M. Oliveira and Sandor Caetano},
           year={2020},
           eprint={2010.07035},
